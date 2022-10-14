@@ -1,38 +1,83 @@
 .App {
   text-align: center;
+  width: 40%;
+  margin: auto;
+  padding: 50px;
+}
+#form-file-upload {
+  height: fit-content;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#input-file-upload {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#label-file-upload {
+  height: 170px;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+.button-uploadFiles {
+  width: 150px;
+  padding: 10px;
+  background-color: transparent;
+  border: 3px solid #7f9cff;
+  border-radius: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.button-uploadFiles:hover {
+  background-color: #7f9cff;
+  color: #292c35;
 }
 
-.App-link {
-  color: #61dafb;
+.singleFile {
+  display: flex;
+  padding: 15px;
+}
+.singleFile span {
+  width: 40%;
+  padding-right: 10px;
+}
+.progress {
+  width: 60%;
+  padding: 2px;
+  max-width: 500px;
+  background: white;
+  border: 3px solid #000;
+  border-radius: 20px;
+  height: 10px;
 }
 
-@keyframes App-logo-spin {
+.progress .progress__bar {
+  height: 100%;
+  width: 50%;
+  border-radius: 15px;
+  background: repeating-linear-gradient(
+    135deg,
+    #036ffc,
+    #036ffc 20px,
+    #1163cf 20px,
+    #1163cf 40px
+  );
+  animation: fill-bar 3s;
+}
+
+@keyframes fill-bar {
   from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    width: 0%;
   }
 }
