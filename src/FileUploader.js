@@ -26,9 +26,8 @@ function FileUploader() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    for (let i = 0; i <= Files.length; i++) {
-      let checkUpload = Files[i].hasOwnProperty("upload");
-      if (Files[i].upload === undefined) {
+    for (let i = 0; i < Files.length; i++) {
+      if (!Files[i]?.upload) {
         setFiles((prevFiles) => {
           prevFiles[i].upload = "100%";
           return [...prevFiles];
